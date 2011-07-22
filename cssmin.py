@@ -47,10 +47,6 @@ def cssmin(css, linebreakpos=None):
     total_len   = len(css)
     placeholder = ''
 
-    stop = False
-    if css.find("LastChangedRevision") > 0:
-        stop = True
-
     # Collect all comment blocks
     start_index = css.find('/*', 0)
     while start_index >= 0:
